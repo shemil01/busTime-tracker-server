@@ -1,6 +1,6 @@
-import Stop from "../models/stops";
+const Stop = require('../models/stops')
 
-export const createStop = async (req, res) => {
+exports.createStop = async (req, res) => {
   try {
     const { name, city, coordinates } = req.body;
     const stop = await Stop.create({ name, city, coordinates });
@@ -10,7 +10,7 @@ export const createStop = async (req, res) => {
   }
 };
 
-export const getStops = async (req, res) => {
+exports.getStops = async (req, res) => {
   try {
     const stops = await Stop.find();
     res.json(stops);

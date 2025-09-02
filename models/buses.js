@@ -1,4 +1,3 @@
-// buses.model.js
 import mongoose from "mongoose";
 
 const busSchema = new mongoose.Schema({
