@@ -1,10 +1,10 @@
 const express = require("express");
-const controllers = require("../controllers/stop");
+const controllers = require("../controllers/routes");
 const router = express.Router();
 
-//  create a stop
-router.post("/create-stop", controllers.createStop);
-// get stop
-router.get("/stop", controllers.getStops);
+//  create a route
+router.post("/create-route", controllers.createRoute);
+// get route
+router.get("/routes", controllers.getRoutes);
 
 module.exports = router;

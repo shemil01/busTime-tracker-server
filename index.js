@@ -6,6 +6,7 @@ const connectDB = require("./config/connectDb");
 // Routes
 const busRoutes = require("./routes/bus");
 const stopRoutes = require("./routes/stop");
+const routeRoutes = require("./routes/route");
 
 const app = express();
 
@@ -26,7 +27,7 @@ app.use(express.json());
 
 // API routes
 app.use("/api", stopRoutes);
-// app.use("/api/routes", routeRoutes);
+app.use("/api", routeRoutes);
 app.use("/api", busRoutes);
 // app.use("/api/schedules", scheduleRoutes);
 // app.use("/api/search", searchRoutes);
