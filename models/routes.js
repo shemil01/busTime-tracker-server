@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";  // use ES module import
 
 const routeSchema = new mongoose.Schema(
   {
@@ -20,11 +20,11 @@ const routeSchema = new mongoose.Schema(
           ref: "Stop",
           required: true,
         },
-        order: { type: Number, required: true }, // stop sequence
+        order: { type: Number, required: true }, 
       },
     ],
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model('Route', routeSchema);
+export default mongoose.model('Route', routeSchema);  // use ES module export

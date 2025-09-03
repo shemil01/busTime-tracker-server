@@ -1,4 +1,4 @@
-const Route = require('../models/routes')
+import Route from '../models/routes.js';  
 
 export const createRoute = async (req, res) => {
   try {
